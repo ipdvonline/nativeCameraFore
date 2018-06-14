@@ -94,9 +94,9 @@ public class NativeCameraLauncher extends CordovaPlugin {
 	public static final int TAKE_PIC_SEC = 0;
 	public static final int SAVE_TO_ALBUM_SEC = 1;
 
-	private int mQuality;
-	private int targetWidth;
-	private int targetHeight;
+	private int mQuality = 70;
+	private int targetWidth = 640;
+	private int targetHeight = 480;
 	private int srcType;
 	private int destType;
 	private int encodingType;
@@ -124,9 +124,9 @@ public class NativeCameraLauncher extends CordovaPlugin {
 				this.targetWidth = 480;
 				this.mQuality = 70;
 				this.encodingType = args.getInt(5);
-				this.targetHeight = args.getInt(4);
-				this.targetWidth = args.getInt(3);
-				this.mQuality = args.getInt(0);
+				this.targetHeight = 640;//args.getInt(4);
+				this.targetWidth = 480;//args.getInt(3);
+				this.mQuality = 70;//args.getInt(0);
 				this.srcType = args.getInt(2);
 				this.destType = args.getInt(1);
 				this.takePicture();
