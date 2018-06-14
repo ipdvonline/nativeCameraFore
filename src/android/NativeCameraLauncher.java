@@ -120,9 +120,9 @@ public class NativeCameraLauncher extends CordovaPlugin {
 		this.callbackContext = callbackContext;
 		try {
 			if (action.equals("takePicture")) {
-				this.targetHeight = 0;
-				this.targetWidth = 0;
-				this.mQuality = 80;
+				this.targetHeight = 640;
+				this.targetWidth = 480;
+				this.mQuality = 70;
 				this.encodingType = args.getInt(5);
 				this.targetHeight = args.getInt(4);
 				this.targetWidth = args.getInt(3);
