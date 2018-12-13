@@ -94,6 +94,11 @@ public class NativeCameraLauncher extends CordovaPlugin {
 	public static final int TAKE_PIC_SEC = 0;
 	public static final int SAVE_TO_ALBUM_SEC = 1;
 
+	private int mediaType;                  
+    	private boolean saveToPhotoAlbum;       
+   	 private boolean correctOrientation;     
+    	private boolean orientationCorrected;   
+    	private boolean allowEdit;              
 	private int mQuality;
 	private int targetWidth;
 	private int targetHeight;
