@@ -68,7 +68,9 @@ import android.content.pm.PackageManager.NameNotFoundException;
  * and returns the captured image.  When the camera view is closed, the screen displayed before
  * the camera view was shown is redisplayed.
  */
-public class CameraLauncher extends CordovaPlugin implements MediaScannerConnectionClient {
+public class NativeCameraLauncher extends CordovaPlugin {
+
+	private static final String LOG_TAG = "NativeCameraLauncher";
 
     private static final int DATA_URL = 0;              // Return base64 encoded string
     private static final int FILE_URI = 1;              // Return file uri (content://media/external/images/media/2 for Android)
@@ -91,8 +93,6 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
     public static final int PERMISSION_DENIED_ERROR = 20;
     public static final int TAKE_PIC_SEC = 0;
     public static final int SAVE_TO_ALBUM_SEC = 1;
-
-    private static final String LOG_TAG = "CameraLauncher";
 
     //Where did this come from?
     private static final int CROP_CAMERA = 100;
